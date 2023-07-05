@@ -3,7 +3,10 @@ from fastapi.responses import HTMLResponse
 import uvicorn
 import requests
 
-app = FastAPI()
+app = FastAPI(
+    docs_url=None,
+    redoc_url=None
+)
 
 @app.get("/{username}")
 async def twitter_user(username: str, response_class=HTMLResponse):

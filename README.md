@@ -4,11 +4,23 @@ A dumb Twitter proxy for the terminally online.
 
 ## Usage
 
-`pipenv install; pipenv update; pipenv run python3 elongate.py`
+```
+# Prepare your python environment
+pipenv install && pipenv update
 
-Spawns a proxy on `localhost:8000`, use `localhost:8000/<username>` to see
-a user's page.
+# Run the service through the virtualenv
+pipenv run python3 elongate.py
+```
 
 It's literally a dumb proxy that tacks on a Googlebot user-agent header.
 
 It doesn't support accounts or sessions and never will. Please don't ask.
+
+## Endpoints
+
+Ideally, each local URL should correspond to the real Twitter URL.
+
+| Local URL                                | Twitter URL                     |
+| ---------------------------------------  | ------------------------------- |
+| `localhost/<username>`                   | `http://twitter.com/<username>`                   |
+| `localhost/<username>/status/<tweet-id>` | `http://twitter.com/<username>/status/<tweet-id>` |

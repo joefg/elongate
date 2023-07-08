@@ -16,6 +16,14 @@ async def twitter_user(username: str, response_class=HTMLResponse):
     ret = requests.get("https://twitter.com/" + username, headers=headers)
     return HTMLResponse(content=ret.text, status_code=200)
 
+@app.get("/{username}/with_replies")
+async def twitter_user_with_replies(username: str, response_class=HTMLResponse):
+    headers = {
+        "User-Agent": "Googlebot"
+    }
+    ret = requests.get("https://twitter.com/" + "/".join([username, 'with_replies']), headers=headers)
+    return HTMLResponse(content=ret.text, status_code=200)
+
 @app.get("/{username}/status/{tweet}")
 async def twitter_tweet(username: str, tweet: int, response_class=HTMLResponse):
     headers = {

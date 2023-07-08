@@ -23,4 +23,5 @@ Ideally, each local URL should correspond to the real Twitter URL.
 | Local URL                                | Twitter URL                     |
 | ---------------------------------------  | ------------------------------- |
 | `localhost/<username>`                   | `http://twitter.com/<username>`                   |
+| `localhost/<username>/with_replies`      | `http://twitter.com/<username>/with_replies`      |
 | `localhost/<username>/status/<tweet-id>` | `http://twitter.com/<username>/status/<tweet-id>` |

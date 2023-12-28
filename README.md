@@ -1,5 +1,14 @@
 # elongate
 
+---
+
+**RETIRED AS OF END 2023**
+
+This is no longer under active development, and will only come back online if
+Elon decides to close the gate again.
+
+---
+
 A dumb Twitter proxy for the terminally online.
 
 ## Usage
